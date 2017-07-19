@@ -52,7 +52,7 @@ class ClueManager {
         switch type {
         case .explain:
             return getNextExplainClue();
-        case .charades:
+        case .charades: 
             return getNextCharadeClue();
         default:
             print("invalid clue type received");
