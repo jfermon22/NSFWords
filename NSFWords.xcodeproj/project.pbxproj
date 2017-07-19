@@ -14,6 +14,8 @@
 		5239B2181F1DDA0200ECF63D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5239B2171F1DDA0200ECF63D /* Assets.xcassets */; };
 		5239B21B1F1DDA0200ECF63D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5239B2191F1DDA0200ECF63D /* LaunchScreen.storyboard */; };
 		5239B2261F1DDA0300ECF63D /* NSFWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239B2251F1DDA0300ECF63D /* NSFWordsTests.swift */; };
+		5239B2321F1EF9FF00ECF63D /* ClueWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239B2311F1EF9FF00ECF63D /* ClueWord.swift */; };
+		5239B2341F1EFCC400ECF63D /* ClueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239B2331F1EFCC400ECF63D /* ClueManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		5239B2211F1DDA0300ECF63D /* NSFWordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSFWordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5239B2251F1DDA0300ECF63D /* NSFWordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFWordsTests.swift; sourceTree = "<group>"; };
 		5239B2271F1DDA0300ECF63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5239B2311F1EF9FF00ECF63D /* ClueWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClueWord.swift; sourceTree = "<group>"; };
+		5239B2331F1EFCC400ECF63D /* ClueManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClueManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		5239B20C1F1DDA0200ECF63D /* NSFWords */ = {
 			isa = PBXGroup;
 			children = (
+				5239B2301F1EF94F00ECF63D /* Models */,
 				5239B20D1F1DDA0200ECF63D /* AppDelegate.swift */,
 				5239B20F1F1DDA0200ECF63D /* ViewController.swift */,
 				5239B2111F1DDA0200ECF63D /* Main.storyboard */,
@@ -97,6 +102,15 @@
 				5239B2271F1DDA0300ECF63D /* Info.plist */,
 			);
 			path = NSFWordsTests;
+			sourceTree = "<group>";
+		};
+		5239B2301F1EF94F00ECF63D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5239B2311F1EF9FF00ECF63D /* ClueWord.swift */,
+				5239B2331F1EFCC400ECF63D /* ClueManager.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +218,9 @@
 			files = (
 				5239B2161F1DDA0200ECF63D /* NSFWords.xcdatamodeld in Sources */,
 				5239B2101F1DDA0200ECF63D /* ViewController.swift in Sources */,
+				5239B2321F1EF9FF00ECF63D /* ClueWord.swift in Sources */,
 				5239B20E1F1DDA0200ECF63D /* AppDelegate.swift in Sources */,
+				5239B2341F1EFCC400ECF63D /* ClueManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
