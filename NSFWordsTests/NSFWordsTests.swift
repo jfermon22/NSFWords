@@ -47,7 +47,7 @@ class NSFWordsTests: XCTestCase {
         words.append( ClueWord(newWord: "Cat", newDef: "Man's worst friend", newType: .charades) );
         words.append( ClueWord(newWord: "Pig", newDef: "Man's dirtiest friend", newType: .charades) );
         
-        var manager = ClueManager(clues: words);
+        let manager = ClueManager(clues: words);
         
         XCTAssertEqual(manager.arrayExplainClues.count, 2);
         XCTAssertEqual(manager.arrayCharadeClues.count, 3);
@@ -128,7 +128,10 @@ class NSFWordsTests: XCTestCase {
         
     }
 
-    
+    func testWordPListParser() {
+        let parser = WordPListParser();
+        parser.printArray();
+    }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

@@ -11,11 +11,26 @@ import Foundation
 enum ClueType {
     case explain
     case charades
+    
+    init(num:NSNumber){
+        switch num {
+        case 0: self = .explain;
+        case 1: self = .charades;
+        default: self = .explain;
+        }
+    }
 
+    init(type:String){
+        switch type.lowercased() {
+        case "explain": self = .explain;
+        case "charades": self = .charades;
+        default: self = .explain;
+        }
+    }
 }
 
-
-class ClueWord : Hashable {
+    
+class ClueWord : Hashable, CustomStringConvertible {
     var word: String;
     var definition: String;
     var type: ClueType;
@@ -39,6 +54,11 @@ class ClueWord : Hashable {
     
     static func == (lhs: ClueWord, rhs: ClueWord) -> Bool {
         return  lhs.word == rhs.word && lhs.type == rhs.type;
+    }
+    
+    var description: String {
+        let string = String("\(word) {def:\(definition) type:\(type)}");
+        return string!
     }
     
 }
