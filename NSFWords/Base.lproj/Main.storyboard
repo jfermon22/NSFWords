@@ -97,22 +97,39 @@
                                     <constraint firstItem="Cas-Hk-vJ3" firstAttribute="centerX" secondItem="7ig-K1-oQ7" secondAttribute="centerX" id="QVy-7H-VEx"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zU4-MA-xe0">
+                                <rect key="frame" x="67" y="117" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvG-7Y-rUQ">
+                                        <rect key="frame" x="109" y="53" width="22" height="22"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="UvG-7Y-rUQ" firstAttribute="centerY" secondItem="zU4-MA-xe0" secondAttribute="centerY" id="AHa-aV-oR2"/>
+                                    <constraint firstItem="UvG-7Y-rUQ" firstAttribute="centerX" secondItem="zU4-MA-xe0" secondAttribute="centerX" id="q1l-VV-BIg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qFk-bT-L2n" firstAttribute="top" secondItem="7ig-K1-oQ7" secondAttribute="bottom" id="4oQ-xe-Efk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zU4-MA-xe0" secondAttribute="trailing" id="63U-Gs-rxW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7ig-K1-oQ7" secondAttribute="trailing" id="8bP-2F-r6a"/>
+                            <constraint firstItem="UJh-Es-v4V" firstAttribute="top" secondItem="zU4-MA-xe0" secondAttribute="bottom" id="DUo-G2-FTB"/>
                             <constraint firstItem="UJh-Es-v4V" firstAttribute="centerY" secondItem="VaH-VQ-eGL" secondAttribute="centerY" id="PFX-j9-odZ"/>
                             <constraint firstItem="UJh-Es-v4V" firstAttribute="centerX" secondItem="VaH-VQ-eGL" secondAttribute="centerX" id="SGe-IX-gsY"/>
                             <constraint firstItem="7ig-K1-oQ7" firstAttribute="top" secondItem="UJh-Es-v4V" secondAttribute="bottom" id="ahM-Fj-Efz"/>
+                            <constraint firstItem="zU4-MA-xe0" firstAttribute="top" secondItem="Drm-9o-X0s" secondAttribute="bottom" id="kTI-we-DVe"/>
+                            <constraint firstItem="zU4-MA-xe0" firstAttribute="leading" secondItem="VaH-VQ-eGL" secondAttribute="leadingMargin" id="vYg-u2-Aia"/>
                             <constraint firstItem="7ig-K1-oQ7" firstAttribute="leading" secondItem="VaH-VQ-eGL" secondAttribute="leadingMargin" id="vme-4S-oZC"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="i" id="ZgC-iG-C1H"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="infoButton" destination="UvG-7Y-rUQ" id="jcu-up-akg"/>
+                        <outlet property="nextButton" destination="Cas-Hk-vJ3" id="KCP-s4-JIB"/>
                         <outlet property="wordLabel" destination="UJh-Es-v4V" id="hSf-W8-ccm"/>
                     </connections>
                 </viewController>
