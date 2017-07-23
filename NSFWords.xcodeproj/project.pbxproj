@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521BA0A61F20533700BEA768 /* NSFW_Words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521BA0A51F20533700BEA768 /* NSFW_Words.plist */; };
+		5207A0EF1F21A53B002A2838 /* NSFW_Words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5207A0EE1F21A53B002A2838 /* NSFW_Words.plist */; };
+		5207A0F11F21B098002A2838 /* Family_Words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5207A0F01F21B098002A2838 /* Family_Words.plist */; };
+		5207A0F31F21D48C002A2838 /* RandomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207A0F21F21D48C002A2838 /* RandomTimer.swift */; };
+		5207A0F91F243494002A2838 /* GamePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5207A0F81F243494002A2838 /* GamePlayViewController.swift */; };
+		521BA0A61F20533700BEA768 /* Test_Words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521BA0A51F20533700BEA768 /* Test_Words.plist */; };
 		521BA0A81F20562B00BEA768 /* WordPListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BA0A71F20562B00BEA768 /* WordPListParser.swift */; };
 		5239B20E1F1DDA0200ECF63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239B20D1F1DDA0200ECF63D /* AppDelegate.swift */; };
 		5239B2101F1DDA0200ECF63D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239B20F1F1DDA0200ECF63D /* ViewController.swift */; };
@@ -31,7 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		521BA0A51F20533700BEA768 /* NSFW_Words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NSFW_Words.plist; sourceTree = "<group>"; };
+		5207A0EE1F21A53B002A2838 /* NSFW_Words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NSFW_Words.plist; sourceTree = "<group>"; };
+		5207A0F01F21B098002A2838 /* Family_Words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Family_Words.plist; sourceTree = "<group>"; };
+		5207A0F21F21D48C002A2838 /* RandomTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTimer.swift; sourceTree = "<group>"; };
+		5207A0F81F243494002A2838 /* GamePlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayViewController.swift; path = ../GamePlayViewController.swift; sourceTree = "<group>"; };
+		521BA0A51F20533700BEA768 /* Test_Words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test_Words.plist; sourceTree = "<group>"; };
 		521BA0A71F20562B00BEA768 /* WordPListParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordPListParser.swift; sourceTree = "<group>"; };
 		5239B20A1F1DDA0200ECF63D /* NSFWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSFWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5239B20D1F1DDA0200ECF63D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +77,9 @@
 		521BA0A41F2052CC00BEA768 /* WordLists */ = {
 			isa = PBXGroup;
 			children = (
-				521BA0A51F20533700BEA768 /* NSFW_Words.plist */,
+				521BA0A51F20533700BEA768 /* Test_Words.plist */,
+				5207A0EE1F21A53B002A2838 /* NSFW_Words.plist */,
+				5207A0F01F21B098002A2838 /* Family_Words.plist */,
 			);
 			name = WordLists;
 			sourceTree = "<group>";
@@ -98,6 +108,7 @@
 				521BA0A41F2052CC00BEA768 /* WordLists */,
 				5239B2301F1EF94F00ECF63D /* Models */,
 				5239B20D1F1DDA0200ECF63D /* AppDelegate.swift */,
+				5207A0F81F243494002A2838 /* GamePlayViewController.swift */,
 				5239B20F1F1DDA0200ECF63D /* ViewController.swift */,
 				5239B2111F1DDA0200ECF63D /* Main.storyboard */,
 				5239B2171F1DDA0200ECF63D /* Assets.xcassets */,
@@ -123,6 +134,7 @@
 				5239B2311F1EF9FF00ECF63D /* ClueWord.swift */,
 				5239B2331F1EFCC400ECF63D /* ClueManager.swift */,
 				521BA0A71F20562B00BEA768 /* WordPListParser.swift */,
+				5207A0F21F21D48C002A2838 /* RandomTimer.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -177,6 +189,7 @@
 				TargetAttributes = {
 					5239B2091F1DDA0100ECF63D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3N2TRZ74AF;
 						ProvisioningStyle = Automatic;
 					};
 					5239B2201F1DDA0200ECF63D = {
@@ -211,8 +224,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5239B21B1F1DDA0200ECF63D /* LaunchScreen.storyboard in Resources */,
+				5207A0EF1F21A53B002A2838 /* NSFW_Words.plist in Resources */,
+				5207A0F11F21B098002A2838 /* Family_Words.plist in Resources */,
 				5239B2181F1DDA0200ECF63D /* Assets.xcassets in Resources */,
-				521BA0A61F20533700BEA768 /* NSFW_Words.plist in Resources */,
+				521BA0A61F20533700BEA768 /* Test_Words.plist in Resources */,
 				5239B2131F1DDA0200ECF63D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,11 +246,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5207A0F31F21D48C002A2838 /* RandomTimer.swift in Sources */,
 				5239B2161F1DDA0200ECF63D /* NSFWords.xcdatamodeld in Sources */,
 				5239B2101F1DDA0200ECF63D /* ViewController.swift in Sources */,
 				5239B2321F1EF9FF00ECF63D /* ClueWord.swift in Sources */,
 				5239B20E1F1DDA0200ECF63D /* AppDelegate.swift in Sources */,
 				5239B2341F1EFCC400ECF63D /* ClueManager.swift in Sources */,
+				5207A0F91F243494002A2838 /* GamePlayViewController.swift in Sources */,
 				521BA0A81F20562B00BEA768 /* WordPListParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3N2TRZ74AF;
 				INFOPLIST_FILE = NSFWords/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FermonJeff.NSFWords;
@@ -387,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3N2TRZ74AF;
 				INFOPLIST_FILE = NSFWords/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FermonJeff.NSFWords;

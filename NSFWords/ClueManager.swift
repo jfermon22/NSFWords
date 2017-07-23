@@ -13,6 +13,7 @@ class ClueManager {
     var arrayUsedExplainClues = Array<ClueWord>();
     var arrayCharadeClues = Array<ClueWord>();
     var arrayUsedCharadeClues = Array<ClueWord>();
+    var initialized = false
 
     
     init() {
@@ -23,6 +24,7 @@ class ClueManager {
         for singleClue in clues {
             insertNewClue(word: singleClue);
         }
+        initialized = true;
     }
     
     func populateClueSets() {

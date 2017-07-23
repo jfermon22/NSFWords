@@ -11,11 +11,11 @@ import Foundation
 class WordPListParser {
     
     var arrayClues = Array<ClueWord>();
-    var filename : String = "NSFW_Words";
+    var filename : String = "Test_Words";
     
     convenience init()
     {
-        self.init(plistName: "NSFW_Words");
+        self.init(plistName: "Test_Words");
     }
     
     init( plistName name : String)

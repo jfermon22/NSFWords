@@ -129,8 +129,23 @@ class NSFWordsTests: XCTestCase {
     }
 
     func testWordPListParser() {
-        let parser = WordPListParser();
-        parser.printArray();
+        var parser = WordPListParser();
+        XCTAssert(!parser.arrayClues.isEmpty)
+        
+        parser = WordPListParser(plistName: "Test_Words");
+        XCTAssert(!parser.arrayClues.isEmpty)
+        
+        parser = WordPListParser(plistName: "NSFW_Words");
+        XCTAssert(!parser.arrayClues.isEmpty)
+        
+        parser = WordPListParser(plistName: "Family_Words");
+        XCTAssert(!parser.arrayClues.isEmpty)
+
+    }
+    
+    func testRandomTimer() {
+        
+       // let timer = RandomTimer(interval: 5, target: nil, callback: "internalCallback")
     }
     
     func testPerformanceExample() {

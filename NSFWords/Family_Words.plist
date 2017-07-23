@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>word</key>
+		<string>Dog</string>
+		<key>definition</key>
+		<string>Member of the Canine family</string>
+		<key>type</key>
+		<string>explain</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>Cat</string>
+		<key>definition</key>
+		<string>Member of the Feline family</string>
+		<key>type</key>
+		<string>explain</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>Dance</string>
+		<key>definition</key>
+		<string>To move body with rhythm</string>
+		<key>type</key>
+		<string>charades</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>Run</string>
+		<key>definition</key>
+		<string>To move faster than a walk</string>
+		<key>type</key>
+		<string>charades</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>Sing</string>
+		<key>definition</key>
+		<string>To speak in a rhythmic tone</string>
+		<key>type</key>
+		<string>charades</string>
+	</dict>
+</array>
+</plist>
