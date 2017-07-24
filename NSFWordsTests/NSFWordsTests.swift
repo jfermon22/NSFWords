@@ -142,11 +142,7 @@ class NSFWordsTests: XCTestCase {
         XCTAssert(!parser.arrayClues.isEmpty)
 
     }
-    
-    func testRandomTimer() {
-        
-       // let timer = RandomTimer(interval: 5, target: nil, callback: "internalCallback")
-    }
+
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

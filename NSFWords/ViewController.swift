@@ -14,17 +14,11 @@ let PLIST_NAME = "NSFW_Words"
 class ViewController: UIViewController {
 
 
-    let plistParser = WordPListParser(plistName: PLIST_NAME)
-    var clueManager : ClueManager?;
+    let gameManager = GameManager(plistName: PLIST_NAME)
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-       if clueManager == nil {
-            clueManager = ClueManager(clues: plistParser.arrayClues);
-        }
         
     }
 
@@ -41,8 +35,7 @@ class ViewController: UIViewController {
         // Create a new variable to store the instance of PlayerTableViewController
         if let destinationVC = segue.destination as? GamePlayViewController
         {
-            destinationVC.clueManager = self.clueManager;
-            destinationVC.clueType = .explain
+            destinationVC.gameManager = self.gameManager;
         }
 
     }

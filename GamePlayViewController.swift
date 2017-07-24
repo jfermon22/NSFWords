@@ -10,14 +10,15 @@ import UIKit
 
 class GamePlayViewController: UIViewController {
 
-    var clueType : ClueType?
-    var clueManager : ClueManager?
+    var gameManager : GameManager?
     var currentWord : ClueWord?
+    var timer = Timer()
     
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var infoButton: UIButton!
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,15 +41,21 @@ class GamePlayViewController: UIViewController {
             if theSender == "viewDidLoad" {
                 setUpForStart()
             }
-        } else {
-            infoButton.isHidden = false;
+        } else  {
+            let button = sender as! UIButton
+            if button.titleLabel?.text == "Start" {
+                 infoButton.isHidden = false;
+                 nextButton.setTitle("Next", for: .normal)
+                startTimer()
+            }
+           
             wordLabel.text = currentWord?.word;
         }
         
     }
     
     func getNextWord() {
-        currentWord = clueManager?.getNextClue(type: clueType!)
+        currentWord = gameManager?.clueManager?.getNextClue(type: (gameManager?.clueType)!)
     }
     
     func setUpForStart() {
@@ -56,6 +63,32 @@ class GamePlayViewController: UIViewController {
         infoButton.isHidden = true;
         wordLabel.text = "Press Start to Begin";
         nextButton.setTitle("Start", for: .normal)
+    }
+    
+    func startTimer() {
+        
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self,   selector: (#selector(self.timerExpired)), userInfo: nil, repeats: false)
+    }
+    
+    func timerExpired() {
+        print("TIMER EXPIRED")
+       performSegue(withIdentifier: "ScoreViewSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        // Create a variable that you want to send
+        // Create a new variable to store the instance of PlayerTableViewController
+        if let destinationVC = segue.destination as? ScoreViewController
+        {
+            destinationVC.gameManager = self.gameManager;
+        }
+        else if let destinationVC = segue.destination as? DefinitionViewController
+        {
+            destinationVC.definition = self.currentWord?.definition;
+        }
+        
     }
     
     
