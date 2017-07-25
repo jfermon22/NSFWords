@@ -20,8 +20,8 @@ class ScoreViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        teamScoreLabel1.text = String(describing: gameManager?.scores[0])
-        teamScoreLabel2.text = String(describing: gameManager?.scores[1])
+        teamScoreLabel1.text = String(describing: gameManager!.scores[0])
+        teamScoreLabel2.text = String(describing: gameManager!.scores[1])
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,13 +30,18 @@ class ScoreViewController: UIViewController {
     }
     
     @IBAction func incrementScore(_ sender: UIButton) {
-        if (sender.titleLabel?.text?.contains("1"))! {
+ 
+        if sender.tag == 0 {
             gameManager?.scores[0] = (gameManager?.scores[0])! + 1
-            teamScoreLabel1.text = String(describing: gameManager?.scores[0])
+            teamScoreLabel1.text = String(describing: gameManager!.scores[0])
         } else {
             gameManager?.scores[1] = (gameManager?.scores[1])! + 1
-            teamScoreLabel2.text = String(describing: gameManager?.scores[1])
+            teamScoreLabel2.text = String(describing: gameManager!.scores[1])
         }
+    }
+    
+    @IBAction func ExitModal(_ sender: UIButton) {
+        dismiss(animated: false, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

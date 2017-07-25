@@ -197,25 +197,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2g0-FL-ycV">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="16" y="20" width="343" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fuv-if-0gD">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="603"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-Bo-xSP">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="215.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="95.5" height="201"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNU-SC-SA6">
-                                                <rect key="frame" x="0.0" y="215.5" width="118" height="216"/>
+                                                <rect key="frame" x="0.0" y="201" width="95.5" height="201"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKd-J1-rS1" userLabel="Increment Team 1">
-                                                <rect key="frame" x="0.0" y="431.5" width="118" height="215.5"/>
+                                                <rect key="frame" x="0.0" y="402" width="95.5" height="201"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                                 <state key="normal" title="/\"/>
                                                 <connections>
@@ -225,41 +225,48 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="bottom" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h0W-cu-Sta">
-                                        <rect key="frame" x="118" y="0.0" width="101" height="647"/>
+                                        <rect key="frame" x="95.5" y="0.0" width="147" height="603"/>
                                         <subviews>
                                             <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="0XA-qN-Y11">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="215.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="201"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2R-8h-mmo">
-                                                <rect key="frame" x="0.0" y="215.5" width="101" height="216"/>
+                                                <rect key="frame" x="0.0" y="201" width="147" height="201"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Increment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SA1-BM-4b0">
-                                                <rect key="frame" x="0.0" y="431.5" width="101" height="215.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cd9-Nt-nB0">
+                                                <rect key="frame" x="0.0" y="402" width="147" height="201"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="Next Round"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="titleLabel.numberOfLines">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="ExitModal:" destination="WuA-n1-5dB" eventType="touchUpInside" id="MVZ-3V-GMA"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pU5-ZX-TYK">
-                                        <rect key="frame" x="219" y="0.0" width="124" height="647"/>
+                                        <rect key="frame" x="242.5" y="0.0" width="100.5" height="603"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enz-3k-Mii">
-                                                <rect key="frame" x="0.0" y="0.0" width="124" height="215.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100.5" height="201"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZc-1G-iHy">
-                                                <rect key="frame" x="0.0" y="215.5" width="124" height="216"/>
+                                                <rect key="frame" x="0.0" y="201" width="100.5" height="201"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84J-5E-Kk1" userLabel="Increment Team 2">
-                                                <rect key="frame" x="0.0" y="431.5" width="124" height="215.5"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84J-5E-Kk1" userLabel="Increment Team 2">
+                                                <rect key="frame" x="0.0" y="402" width="100.5" height="201"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                                 <state key="normal" title="/\"/>
                                                 <connections>

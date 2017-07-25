@@ -26,6 +26,9 @@ class GamePlayViewController: UIViewController {
         // Do any additional setup after loading the view.
         updateToNextWord("viewDidLoad")
     }
+    override func viewDidAppear(_ animated: Bool) {
+         updateToNextWord("viewDidLoad")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
