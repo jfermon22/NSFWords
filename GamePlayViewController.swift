@@ -9,25 +9,27 @@
 import UIKit
 
 class GamePlayViewController: UIViewController {
-
+    
     var gameManager : GameManager?
     var currentWord : ClueWord?
     var timer = Timer()
+    var shouldResetGame = true
     
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var infoButton: UIButton!
-
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        shouldResetGame = true
         updateToNextWord("viewDidLoad")
     }
     override func viewDidAppear(_ animated: Bool) {
-         updateToNextWord("viewDidLoad")
+        updateToNextWord("viewDidAppear")
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,17 +43,17 @@ class GamePlayViewController: UIViewController {
         
         if let theSender = sender as? String
         {
-            if theSender == "viewDidLoad" {
+            if theSender == "viewDidLoad" || (theSender == "viewDidAppear" && shouldResetGame ) {
                 setUpForStart()
             }
         } else  {
             let button = sender as! UIButton
             if button.titleLabel?.text == "Start" {
-                 infoButton.isHidden = false;
-                 nextButton.setTitle("Next", for: .normal)
+                infoButton.isHidden = false;
+                nextButton.setTitle("Next", for: .normal)
                 startTimer()
             }
-           
+            
             wordLabel.text = currentWord?.word;
         }
         
@@ -62,7 +64,7 @@ class GamePlayViewController: UIViewController {
     }
     
     func setUpForStart() {
-
+        
         infoButton.isHidden = true;
         wordLabel.text = "Press Start to Begin";
         nextButton.setTitle("Start", for: .normal)
@@ -75,7 +77,25 @@ class GamePlayViewController: UIViewController {
     
     func timerExpired() {
         print("TIMER EXPIRED")
-       performSegue(withIdentifier: "ScoreViewSegue", sender: self)
+        
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            // topController should now be your topmost view controller
+            if let _ = topController as? DefinitionViewController {
+                print("is defintion view");
+                self.dismiss(animated: false, completion: self.showScoreView)
+            } else  {
+                showScoreView()
+            }
+        }
+    }
+    
+    func showScoreView() {
+         self.performSegue(withIdentifier: "ScoreViewSegue", sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,10 +106,12 @@ class GamePlayViewController: UIViewController {
         if let destinationVC = segue.destination as? ScoreViewController
         {
             destinationVC.gameManager = self.gameManager;
+            shouldResetGame = true
         }
         else if let destinationVC = segue.destination as? DefinitionViewController
         {
             destinationVC.definition = self.currentWord?.definition;
+            shouldResetGame = false
         }
         
     }
