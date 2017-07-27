@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         // Pass the selected object to the new view controller.
         // Create a variable that you want to send
         // Create a new variable to store the instance of PlayerTableViewController
-        if let destinationVC = segue.destination as? GamePlayViewController
+        if let destinationVC = segue.destination as? GameSelectionViewController
         {
             destinationVC.gameManager = self.gameManager;
         }

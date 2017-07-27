@@ -8,6 +8,9 @@
 
 import UIKit
 
+let MIN_TIME_INTERVAL : UInt32 = 30
+let MAX_TIME_INTERVAL : UInt32 = 60
+
 class GamePlayViewController: UIViewController {
     
     var gameManager : GameManager?
@@ -25,8 +28,6 @@ class GamePlayViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        shouldResetGame = true
-        updateToNextWord("viewDidLoad")
     }
     override func viewDidAppear(_ animated: Bool) {
         updateToNextWord("viewDidAppear")
@@ -38,12 +39,9 @@ class GamePlayViewController: UIViewController {
     }
     
     @IBAction func updateToNextWord(_ sender: Any) {
-        getNextWord()
-        print("nextWord is \(currentWord)")
-        
         if let theSender = sender as? String
         {
-            if theSender == "viewDidLoad" || (theSender == "viewDidAppear" && shouldResetGame ) {
+            if theSender == "viewDidAppear" && shouldResetGame  {
                 setUpForStart()
             }
         } else  {
@@ -54,6 +52,8 @@ class GamePlayViewController: UIViewController {
                 startTimer()
             }
             
+            getNextWord()
+            print("nextWord is \(currentWord)")
             wordLabel.text = currentWord?.word;
         }
         
@@ -72,7 +72,9 @@ class GamePlayViewController: UIViewController {
     
     func startTimer() {
         
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self,   selector: (#selector(self.timerExpired)), userInfo: nil, repeats: false)
+        let number = arc4random_uniform((MAX_TIME_INTERVAL - MIN_TIME_INTERVAL) + 1) + MIN_TIME_INTERVAL
+        print("Set Timer for: \(number)")
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(number), target: self,   selector: (#selector(self.timerExpired)), userInfo: nil, repeats: false)
     }
     
     func timerExpired() {
